@@ -1,0 +1,14 @@
+rootProject.name = 'ks-london-2020'
+
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+	}
+}
+
+include 'data-model'
+include 'request-handler'
+include 'quiz-builder'
+include 'quizzer'

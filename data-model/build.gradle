@@ -1,0 +1,73 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.17.0"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+    id 'groovy'
+    id 'maven-publish'
+}
+
+apply plugin: "com.commercehub.gradle.plugin.avro"
+
+group = 'com.github.nbuesing.quiz'
+version = '0.0.0'
+
+avro {
+    createSetters = true
+    fieldVisibility = "PRIVATE"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "http://packages.confluent.io/maven/"
+    }
+}
+dependencies {
+    compile group: 'org.apache.avro', name: 'avro', version: avro_version
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: apache_commons_version
+    compile group: 'org.apache.commons', name: 'commons-text', version: apache_commons_text_version
+    compile group: 'commons-io', name: 'commons-io', version: apache_commons_io_version
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jackson_version
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jackson_version
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: jackson_version
+
+    compile group: 'org.apache.kafka', name: 'connect-api', version: kafka_version
+    compile group: 'io.confluent', name: 'kafka-connect-avro-converter', version: confluent_io_version
+
+    // lombok dependencies
+    compileOnly "org.projectlombok:lombok:${lombok_version}"
+    annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+    testCompileOnly "org.projectlombok:lombok:${lombok_version}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+    testCompile group: 'junit', name: 'junit', version: junit_version
+    testCompile group: 'org.spockframework', name: 'spock-core', version: spockframework_version
+}
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'data-model'
+            from components.java
+        }
+    }
+}
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = compileJava.destinationDir
+        testOutputDir = compileTestJava.destinationDir
+    }
+}

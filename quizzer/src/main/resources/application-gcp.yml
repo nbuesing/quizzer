@@ -1,0 +1,5 @@
+kafka:
+  security-protocol: PLAINTEXT
+  bootstrap-servers:
+    - kafka-0:9092
+  schema-registry: http://kafka-0:8081

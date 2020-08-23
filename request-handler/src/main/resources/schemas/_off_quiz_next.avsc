@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "name": "QuizQuestion",
+  "namespace": "com.github.nbuesing.quiz",
+  "fields": [
+    {
+      "name": "QUIZ_ID",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "QUESTION_ID",
+      "type": "int"
+    },
+    {
+      "name": "STATEMENT",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "A",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "B",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "C",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "D",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    }
+  ]
+}

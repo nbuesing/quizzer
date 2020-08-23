@@ -1,0 +1,44 @@
+question_id,statement,a,b,c,d,correct_answer,difficulty
+EASY_1,What concept leverages compacted topics?,KTable,KStream,Window,nothing,a,0
+EASY_2,What does DSL stand for?,DSL,"Duh, Shh, Laugh",Dynamic Scripting Language,Nothing,c,0
+EASY_3,What join types are supported for KTables and Global KTables?,Inner,Left,Outer,None,d,0
+EASY_4,Kafka Streams runs,on the brokers,in a JVM,within Kafka Connect,on a mainframe,b,0
+EAST_5,RocksDB the provided state-store?,true,false,,,a,0
+EAST_6,You can implement your own state-store?,true,false,,,a,0
+EASY_7,A Sink has downstream processors.,true,false,,,b,1
+EASY_8,A Source has downstream processors.,true,false,,,a,1
+EASY_9,"If a Hopping Window has a size of 5 minutes and an advance of 1 minute, an event can end up in how may windows?",1,4,5,6,c,0
+EASY_10,"The only way to test Kafka Streams is by running an instance of Kafka",true,false,,,b,0
+EASY_11,"The DSL 'branch' operation requires state?",true,false,,,b,0
+EASY_12,"The DSL 'filter' operation requires state?",true,false,,,b,0
+EASY_13,"The DSL 'map' operation requires state?",true,false,,,b,0
+EASY_14,"The DSL 'flatMap' operation requires state?",true,false,,,b,0
+EASY_15,"The DSL 'reduce' operation requires state?",true,false,,,a,0
+EASY_16,"The DSL 'aggregate' operation requires state?",true,false,,,a,0
+MEDIUM_1,What version of Apache Kafka introduced naming topology notes?,"2.2","2.3","2.4","2.5",c,1
+MEDIUM_2,"If you read a stream with Consumed.with(null, null), what happens?",Null Pointer Exception,Default Serdes are used,byte[] Serdes are used,String Serdes are used,b,1
+MEDIUM_3,"To join two streams together, you need?",Tumbling Windows,Hopping Windows,Session Windows,Any of the above,d,1
+MEDIUM_4,"Which windowing mechanism can merge two windows together?",Sliding,Hoping,Session,Tumbling,c,1
+MEDIUM_5,The result of an aggregate can be either a KTable or a KStream,true,false,,,b,1
+MEDIUM_6,"To minimize downtime, consider using these.",standby replicas,change log topics,repartitioning,1 partition,a,1
+MEDIUM_7,"What applications are built on Kafka Streams?",ksqlDB,Confluent Control Center,Both,Neither,c,1
+MEDIUM_8,"If you access a state store in a topology, you have to worry about concurrent access",true,false,,,b,1
+MEDIUM_9,"for a given message, every sub-topology is processed by the same stream instance",true,false,,,b,1
+MEDIUM_10,"Subtopologies are linked together through a repartition topic",true,false,,,a,1
+MEDIUM_11,"With the Kafka DSL, what operation can produce multiple events from a single event?",map,reduce,flatMap,peek,c,1
+MEDIUM_12,"To minimize restoration type if a Kafka Stream application is rebalanced, leverage...",more partitions,less partitions,standby replicas,global KTables,c,1
+MEDIUM_13,"The default deserialization handler is?",LogAndFail,LogAndContinue,LogAndSometimesFail,there is no default,b,1
+MEDIUM_14,"The default number of threads for a Streams instance is?",0,1,2,3,b,1
+MEDIUM_15,"Serialization and deserialization in Kafka Streams happens when",data is read or written to a Kafka topic,data is read or written to a state store,both,neither,c,1
+HARD_1,"What is the default commit.interval.ms value if processing.guarantee is exactly_once?","30,000","0","100",MAX_INT,c,2
+HARD_2,"What is the default commit.interval.ms value if processing.guarantee is at_least_once?","30,000","0","100",MAX_INT,a,2
+HARD_3,"When was suppression added to the DSL?","2.0","2.1","2.2","2.3",b,2
+HARD_4,"How can you directly access a state store while still using the DSL?",In an aggregate,In a transformValues,In a map,In a peek,b,2
+HARD_5,"How can you control record emission by wall-clock time?",By using processor API,By using supression,You can't,By a join rule,a,2
+HARD_6,"the reduce() operation is a special form of",join,aggregate,peek,mapValues,b,2
+HARD_7,"a topology can have cycles",true,false,,,b,2
+HARD_8,"The configuration of auto.offset.reset has the same default as Kafka Consumers",true,false,,,b,2
+HARD_9,"The default number of retries for Kafka Stream producing is",MAX_INT,1,5,10,d,2
+HARD_10,"If caching is disabled in a state store it will",not write to disk,every record is written to destination topic,you could run out of heap,can lose processing on failure,b,2
+HARD_11,"Out-of-Order Handling is supported the following type of joins?",Stream-Stream,Stream-Table,Table-Table,all,a,2
+HARD_12,"The default linger in a streams producer is?",0ms,10ms,50ms,100ms,d,2

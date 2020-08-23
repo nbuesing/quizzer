@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "QuizStatus",
+  "namespace": "com.github.nbuesing.quiz.model",
+  "fields": [
+    {
+      "name": "quiz_id",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "user_name",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default" : null
+    },
+    {
+      "name": "correct",
+      "type": "int"
+    },
+    {
+      "name": "answered",
+      "type": "int"
+    },
+    {
+      "name": "questions",
+      "type": "int"
+    }
+  ]
+}

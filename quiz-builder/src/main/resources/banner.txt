@@ -1,0 +1,27 @@
+
+                                        iiii
+                                       i::::i
+                                        iiii
+
+   qqqqqqqqq   qqqqquuuuuu    uuuuuu  iiiiiii zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz    eeeeeeeeeeee    rrrrr   rrrrrrrrr
+  q:::::::::qqq::::qu::::u    u::::u  i:::::i z:::::::::::::::zz:::::::::::::::z  ee::::::::::::ee  r::::rrr:::::::::r
+ q:::::::::::::::::qu::::u    u::::u   i::::i z::::::::::::::z z::::::::::::::z  e::::::eeeee:::::eer:::::::::::::::::r
+q::::::qqqqq::::::qqu::::u    u::::u   i::::i zzzzzzzz::::::z  zzzzzzzz::::::z  e::::::e     e:::::err::::::rrrrr::::::r
+q:::::q     q:::::q u::::u    u::::u   i::::i       z::::::z         z::::::z   e:::::::eeeee::::::e r:::::r     r:::::r
+q:::::q     q:::::q u::::u    u::::u   i::::i      z::::::z         z::::::z    e:::::::::::::::::e  r:::::r     rrrrrrr
+q:::::q     q:::::q u::::u    u::::u   i::::i     z::::::z         z::::::z     e::::::eeeeeeeeeee   r:::::r
+q::::::q    q:::::q u:::::uuuu:::::u   i::::i    z::::::z         z::::::z      e:::::::e            r:::::r
+q:::::::qqqqq:::::q u:::::::::::::::uui::::::i  z::::::zzzzzzzz  z::::::zzzzzzzze::::::::e           r:::::r
+ q::::::::::::::::q  u:::::::::::::::ui::::::i z::::::::::::::z z::::::::::::::z e::::::::eeeeeeee   r:::::r
+  qq::::::::::::::q   uu::::::::uu:::ui::::::iz:::::::::::::::zz:::::::::::::::z  ee:::::::::::::e   r:::::r
+    qqqqqqqq::::::q     uuuuuuuu  uuuuiiiiiiiizzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz    eeeeeeeeeeeeee   rrrrrrr
+            q:::::q
+            q:::::q
+           q:::::::q
+           q:::::::q
+           q:::::::q
+           qqqqqqqqq
+
+${AnsiColor.BLUE}:: spring-boot version: ${spring-boot.version} :: ${AnsiColor.BLACK}
+${AnsiColor.GREEN}:: active-profiles: ${spring.profiles.active} :: ${AnsiColor.BLACK}
+

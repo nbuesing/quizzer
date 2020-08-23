@@ -1,0 +1,118 @@
+
+buildscript {
+    ext {
+        springBootVersion = '2.2.4.RELEASE'
+    }    
+	repositories {
+		mavenCentral()
+        jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+plugins {
+	id 'org.springframework.boot' version "2.2.4.RELEASE"
+	id 'io.spring.dependency-management' version '1.0.6.RELEASE'
+	id 'java'
+	id 'groovy'
+	id 'idea'
+	id 'maven-publish'
+}
+
+group = 'com.github.nbuesing.quiz'
+version = '0.0.0'
+
+version = '1.0.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	jcenter()
+	maven {
+		url "http://packages.confluent.io/maven/"
+	}
+	maven {
+		url "https://ksqldb-maven.s3.amazonaws.com/maven"
+	}
+	maven {
+		url "https://jenkins-confluent-packages-beta-maven.s3.amazonaws.com/6.0.0-beta200608020919/1/maven/"
+	}
+
+}
+
+dependencies {
+
+	implementation project(":data-model")
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
+
+	implementation group: 'org.springframework.security', name: 'spring-security-config'
+	implementation group: 'org.springframework.security', name: 'spring-security-web'
+
+	implementation 'io.projectreactor.kafka:reactor-kafka:1.2.2.RELEASE'
+
+	implementation "com.google.guava:guava:${guava_version}"
+
+	implementation "tech.allegro.schema.json2avro:converter:${json2avro_version}"
+
+	implementation "io.confluent:kafka-streams-avro-serde:${confluent_io_version}"
+	implementation "io.confluent:kafka-avro-serializer:${confluent_io_version}"
+
+	implementation ('io.confluent.ksql:ksqldb-api-client:0.10.0') {
+		exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+	}
+
+	implementation "commons-validator:commons-validator:${apache_commons_validator_version}"
+
+	implementation "org.apache.kafka:kafka-clients:${kafka_version}"
+	implementation "org.apache.commons:commons-lang3:${apache_commons_version}"
+
+	// lombok dependencies
+
+	compileOnly "org.projectlombok:lombok:${lombok_version}"
+	annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+	testCompileOnly "org.projectlombok:lombok:${lombok_version}"
+	testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+	// testing dependencies
+
+	testImplementation "org.springframework.boot:spring-boot-starter-test"
+	testImplementation "org.spockframework:spock-core:${spockframework_version}"
+	testImplementation "org.spockframework:spock-spring:${spockframework_version}"
+	testImplementation "org.springframework.boot:spring-boot-starter-test:${springboot_version}"
+}
+
+bootRun {
+	jvmArgs = [
+			'-Xdebug',
+			'-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5007'
+	]
+	args = [
+			'--spring.profiles.active=local'
+	]
+}
+
+idea {
+	module{
+		inheritOutputDirs = false
+		outputDir = compileJava.destinationDir
+		testOutputDir = compileTestJava.destinationDir
+	}
+}
+
+task buildDockerImage(type: Exec) {
+	inputs.files 'Dockerfile'
+	commandLine 'docker', 'build', '-t', 'nbuesing/request-handler:2.0.0', '.'
+}
+
+build.dependsOn buildDockerImage

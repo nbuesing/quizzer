@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Questions",
+  "namespace": "com.github.nbuesing.quiz.model",
+  "fields": [
+    {
+      "name": "question_ids",
+      "type": {
+        "type" : "array",
+        "items" : "string"
+      },
+      "default": []
+    }
+  ]
+}

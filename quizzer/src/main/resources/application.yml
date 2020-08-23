@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: unwrapper
+
+server:
+  servlet:
+    context-path: /
+  port: 9086
+
+management:
+  endpoint:
+    restart:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,env,restart"
+
+kafka:
+  consumer:
+    group-id: shouldNotBeNeeded2
+    auto-offset-reset: earliest
+    enable-auto-commit: true
+    auto-commit-interval: 5000
+    specific-avro-reader: true
+  streams:
+    application-id: quizzer
+    commit-interval: 100
+    specific-avro-reader: true
+
+application:
+  users: "users"
+  questions: "questions"
+  questionsDifficulty: "questions_by_difficulty"
+  quizStart: "quiz_start"
+  quizSubmission: "quiz_submission"
+  quizNext: "quiz_next"
+  quizResults: "quiz_result"
+  quizStatus: "quiz_status"
+

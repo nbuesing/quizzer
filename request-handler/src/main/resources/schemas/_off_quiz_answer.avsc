@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "QuizAnswer",
+  "namespace": "com.github.nbuesing.quiz",
+  "fields": [
+    {
+      "name": "QUIZ_ID",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "USER_ID",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "QUESTION_ID",
+      "type": "int"
+    },
+    {
+      "name": "SUBMITTED_ANSWER",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    }
+  ]
+}

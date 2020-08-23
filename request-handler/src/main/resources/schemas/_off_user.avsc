@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "com.github.nbuesing.quiz",
+  "fields": [
+    {
+      "name": "USER_ID",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "NAME",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    }
+  ]
+}

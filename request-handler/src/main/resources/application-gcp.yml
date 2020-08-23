@@ -1,0 +1,12 @@
+kafka:
+  security-protocol: PLAINTEXT
+  bootstrap-servers:
+    - kafka-0:9092
+    - broker-2:9092
+    - broker-3:9092
+    - broker-4:9092
+  schema-registry: http://kafka-0:8081
+
+application:
+  origins:
+    - http://instance-1:8080

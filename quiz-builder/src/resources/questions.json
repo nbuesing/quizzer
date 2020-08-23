@@ -1,0 +1,432 @@
+[
+  {
+    "question_id": "EASY_1",
+    "statement": "What concept leverages compacted topics?",
+    "a": "KTable",
+    "b": "KStream",
+    "c": "Window",
+    "d": "nothing",
+    "correct_answer": "a",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_2",
+    "statement": "What does DSL stand for?",
+    "a": "DSL",
+    "b": "Duh, Shh, Laugh",
+    "c": "Dynamic Scripting Language",
+    "d": "Nothing",
+    "correct_answer": "c",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_3",
+    "statement": "What join types are supported for KTables and Global KTables?",
+    "a": "Inner",
+    "b": "Left",
+    "c": "Outer",
+    "d": "None",
+    "correct_answer": "d",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_4",
+    "statement": "Kafka Streams runs",
+    "a": "on the brokers",
+    "b": "in a JVM",
+    "c": "within Kafka Connect",
+    "d": "on a mainframe",
+    "correct_answer": "b",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EAST_5",
+    "statement": "RocksDB the provided state-store?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "a",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EAST_6",
+    "statement": "You can implement your own state-store?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "a",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_7",
+    "statement": "A Sink has downstream processors.",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "EASY_8",
+    "statement": "A Source has downstream processors.",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "a",
+    "difficulty": 1
+  },
+  {
+    "question_id": "EASY_9",
+    "statement": "If a Hopping Window has a size of 5 minutes and an advance of 1 minute, an event can end up in how may windows?",
+    "a": "1",
+    "b": "4",
+    "c": "5",
+    "d": "6",
+    "correct_answer": "c",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_10",
+    "statement": "The only way to test Kafka Streams is by running an instance of Kafka",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_11",
+    "statement": "The DSL 'branch' operation requires state?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_12",
+    "statement": "The DSL 'filter' operation requires state?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_13",
+    "statement": "The DSL 'map' operation requires state?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_14",
+    "statement": "The DSL 'flatMap' operation requires state?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_15",
+    "statement": "The DSL 'reduce' operation requires state?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "a",
+    "difficulty": 0
+  },
+  {
+    "question_id": "EASY_16",
+    "statement": "The DSL 'aggregate' operation requires state?",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "a",
+    "difficulty": 0
+  },
+  {
+    "question_id": "MEDIUM_1",
+    "statement": "What version of Apache Kafka introduced naming topology notes?",
+    "a": "2.2",
+    "b": "2.3",
+    "c": "2.4",
+    "d": "2.5",
+    "correct_answer": "c",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_2",
+    "statement": "If you read a stream with Consumed.with(null, null), what happens?",
+    "a": "Null Pointer Exception",
+    "b": "Default Serdes are used",
+    "c": "byte[] Serdes are used",
+    "d": "String Serdes are used",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_3",
+    "statement": "To join two streams together, you need?",
+    "a": "Tumbling Windows",
+    "b": "Hopping Windows",
+    "c": "Session Windows",
+    "d": "Any of the above",
+    "correct_answer": "d",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_4",
+    "statement": "Which windowing mechanism can merge two windows together?",
+    "a": "Sliding",
+    "b": "Hoping",
+    "c": "Session",
+    "d": "Tumbling",
+    "correct_answer": "c",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_5",
+    "statement": "The result of an aggregate can be either a KTable or a KStream",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_6",
+    "statement": "To minimize downtime, consider using these.",
+    "a": "standby replicas",
+    "b": "change log topics",
+    "c": "repartitioning",
+    "d": "1 partition",
+    "correct_answer": "a",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_7",
+    "statement": "What applications are built on Kafka Streams?",
+    "a": "ksqlDB",
+    "b": "Confluent Control Center",
+    "c": "Both",
+    "d": "Neither",
+    "correct_answer": "c",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_8",
+    "statement": "If you access a state store in a topology, you have to worry about concurrent access",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_9",
+    "statement": "for a given message, every sub-topology is processed by the same stream instance",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_10",
+    "statement": "Subtopologies are linked together through a repartition topic",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "a",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_11",
+    "statement": "With the Kafka DSL, what operation can produce multiple events from a single event?",
+    "a": "map",
+    "b": "reduce",
+    "c": "flatMap",
+    "d": "peek",
+    "correct_answer": "c",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_12",
+    "statement": "To minimize restoration type if a Kafka Stream application is rebalanced, leverage...",
+    "a": "more partitions",
+    "b": "less partitions",
+    "c": "standby replicas",
+    "d": "global KTables",
+    "correct_answer": "c",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_13",
+    "statement": "The default deserialization handler is?",
+    "a": "LogAndFail",
+    "b": "LogAndContinue",
+    "c": "LogAndSometimesFail",
+    "d": "there is no default",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_14",
+    "statement": "The default number of threads for a Streams instance is?",
+    "a": "0",
+    "b": "1",
+    "c": "2",
+    "d": "3",
+    "correct_answer": "b",
+    "difficulty": 1
+  },
+  {
+    "question_id": "MEDIUM_15",
+    "statement": "Serialization and deserialization in Kafka Streams happens when",
+    "a": "data is read or written to a Kafka topic",
+    "b": "data is read or written to a state store",
+    "c": "both",
+    "d": "neither",
+    "correct_answer": "c",
+    "difficulty": 1
+  },
+  {
+    "question_id": "HARD_1",
+    "statement": "What is the default commit.interval.ms value if processing.guarantee is exactly_once?",
+    "a": "30,000",
+    "b": "0",
+    "c": "100",
+    "d": "MAX_INT",
+    "correct_answer": "c",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_2",
+    "statement": "What is the default commit.interval.ms value if processing.guarantee is at_least_once?",
+    "a": "30,000",
+    "b": "0",
+    "c": "100",
+    "d": "MAX_INT",
+    "correct_answer": "a",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_3",
+    "statement": "When was suppression added to the DSL?",
+    "a": "2.0",
+    "b": "2.1",
+    "c": "2.2",
+    "d": "2.3",
+    "correct_answer": "b",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_4",
+    "statement": "How can you directly access a state store while still using the DSL?",
+    "a": "In an aggregate",
+    "b": "In a transformValues",
+    "c": "In a map",
+    "d": "In a peek",
+    "correct_answer": "b",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_5",
+    "statement": "How can you control record emission by wall-clock time?",
+    "a": "By using processor API",
+    "b": "By using supression",
+    "c": "You can't",
+    "d": "By a join rule",
+    "correct_answer": "a",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_6",
+    "statement": "the reduce() operation is a special form of",
+    "a": "join",
+    "b": "aggregate",
+    "c": "peek",
+    "d": "mapValues",
+    "correct_answer": "b",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_7",
+    "statement": "a topology can have cycles",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_8",
+    "statement": "The configuration of auto.offset.reset has the same default as Kafka Consumers",
+    "a": "true",
+    "b": "false",
+    "c": "",
+    "d": "",
+    "correct_answer": "b",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_9",
+    "statement": "The default number of retries for Kafka Stream producing is",
+    "a": "MAX_INT",
+    "b": "1",
+    "c": "5",
+    "d": "10",
+    "correct_answer": "d",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_10",
+    "statement": "If caching is disabled in a state store it will",
+    "a": "not write to disk",
+    "b": "every record is written to destination topic",
+    "c": "you could run out of heap",
+    "d": "can lose processing on failure",
+    "correct_answer": "b",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_11",
+    "statement": "Out-of-Order Handling is supported the following type of joins?",
+    "a": "Stream-Stream",
+    "b": "Stream-Table",
+    "c": "Table-Table",
+    "d": "all",
+    "correct_answer": "a",
+    "difficulty": 2
+  },
+  {
+    "question_id": "HARD_12",
+    "statement": "The default linger in a streams producer is?",
+    "a": "0ms",
+    "b": "10ms",
+    "c": "50ms",
+    "d": "100ms",
+    "correct_answer": "d",
+    "difficulty": 2
+  }
+]

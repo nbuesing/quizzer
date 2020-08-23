@@ -1,0 +1,59 @@
+{
+  "type": "record",
+  "name": "QuizSubmission",
+  "namespace": "com.github.nbuesing.quiz",
+  "doc" : "user submission of a question; correct_answer and question_count are used internally by quizzer.",
+  "fields": [
+    {
+      "name": "quiz_id",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "question_id",
+      "type": "string"
+    },
+    {
+      "name": "submitted_answer",
+      "type": "string"
+    },
+    {
+      "name": "correct_answer",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "used internally by quizzer application; avoids need of another data-structure"
+    },
+    {
+      "name": "difficulty",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null,
+      "doc": "used internally by quizzer application; avoids need of another data-structure"
+    },
+    {
+      "name": "question_count",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null,
+      "doc": "used internally by quizzer application; avoids need of another data structure"
+    },
+    {
+      "name": "request_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ]
+}

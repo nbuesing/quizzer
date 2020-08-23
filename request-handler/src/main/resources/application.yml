@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: nbuesing-quiz
+
+server:
+  servlet:
+    context-path: /
+  port: 9080
+
+management:
+  endpoint:
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,env,restart"
+
+kafka:
+  producer:
+    client-id: nbuesing-request-handler_b
+  consumer:
+    client-id: nbuesing-request-handler_b
+    group-id: nbuesing-request-handler_b
+    specific-avro-reader: true
+
+application:
+  userTopic: users
+  questionTopic: questions
+  quizStartTopic: quiz_start
+  quizNextTopic: quiz_next
+  quizResultTopic: quiz_result
+  quizSubmissionTopic: quiz_submission
+  quizTopic: quiz

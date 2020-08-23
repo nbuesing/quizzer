@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "name": "QuizQuestion",
+  "namespace": "com.github.nbuesing.quiz",
+  "doc" : "returned to the user for them to answer.",
+  "fields": [
+    {
+      "name": "quiz_id",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "question_id",
+      "type": "string"
+    },
+    {
+      "name": "statement",
+      "type": "string"
+    },
+    {
+      "name": "a",
+      "type": "string"
+    },
+    {
+      "name": "b",
+      "type": "string"
+    },
+    {
+      "name": "c",
+      "type": "string"
+    },
+    {
+      "name": "d",
+      "type": "string"
+    },
+    {
+      "name": "difficulty",
+      "type": "int",
+      "default": -1
+    },
+    {
+      "name": "request_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default" : null
+    }
+  ]
+}

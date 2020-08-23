@@ -1,0 +1,10 @@
+   ____        _
+  / __ \      (_)
+ | |  | |_   _ _ ___________ _ __
+ | |  | | | | | |_  /_  / _ \ '__|
+ | |__| | |_| | |/ / / /  __/ |
+  \___\_\\__,_|_/___/___\___|_|
+
+${AnsiColor.BLUE}:: spring-boot version: ${spring-boot.version} :: ${AnsiColor.BLACK}
+${AnsiColor.GREEN}:: active-profiles: ${spring.profiles.active} :: ${AnsiColor.BLACK}
+

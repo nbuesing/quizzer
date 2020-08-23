@@ -1,0 +1,44 @@
+---
+version: '3.7'
+
+networks:
+  default:
+    external:
+      name: ks2020_network
+
+services:
+
+  quizzer-ui:
+    hostname: quizzer-ui
+    container_name: ks2020_quizzer-ui
+    image: ${DOCKER_USER}/quizzer-ui:2.0.0
+    ports:
+      - '8080:8080'
+
+#  request-handler:
+#    hostname: request-handler
+#    container_name: ks2020_request-handler
+#    image: ${DOCKER_USER}/request-handler:2.0.0
+#    ports:
+#      - '9080:9080'
+#    environment:
+#      ENVIRONMENT: docker
+
+  quizzer:
+    hostname: quizzer
+    container_name: ks2020_quizzer
+    image: ${DOCKER_USER}/quizzer:2.0.0
+    ports:
+      - '9086:9086'
+    environment:
+      ENVIRONMENT: docker
+
+  quiz-builder:
+    hostname: quizzer
+    container_name: ks2020_quiz-builder
+    image: ${DOCKER_USER}/quiz-builder:2.0.0
+    ports:
+      - '9087:9087'
+    environment:
+      ENVIRONMENT: docker
+

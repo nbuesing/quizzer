@@ -1,0 +1,88 @@
+
+plugins {
+	id 'org.springframework.boot' version "2.2.2.RELEASE"
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'groovy'
+	id 'idea'
+	id 'maven-publish'
+
+}
+
+group = 'com.github.nbuesing.quiz'
+description = 'quiz-builder'
+
+version = '0.0.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	jcenter()
+	maven {
+		url "http://packages.confluent.io/maven/"
+	}
+}
+
+dependencies {
+
+	implementation project(":data-model")
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-configuration-processor'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	
+	implementation "org.apache.kafka:kafka-clients:${kafka_version}"
+	implementation "org.apache.kafka:kafka-streams:${kafka_version}"
+	implementation "io.confluent:kafka-streams-avro-serde:${confluent_io_version}"
+	implementation "io.confluent:kafka-avro-serializer:${confluent_io_version}"
+	implementation "io.confluent:kafka-schema-registry-client:${confluent_io_version}"
+
+	implementation "org.apache.avro:avro:${avro_version}"
+	implementation "org.apache.commons:commons-lang3:${apache_commons_version}"
+
+	// lombok dependencies
+	compileOnly "org.projectlombok:lombok:${lombok_version}"
+	annotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+	testCompileOnly "org.projectlombok:lombok:${lombok_version}"
+	testAnnotationProcessor "org.projectlombok:lombok:${lombok_version}"
+
+	testImplementation "org.springframework.boot:spring-boot-starter-test"
+	testImplementation "org.apache.kafka:kafka-streams-test-utils:${kafka_version}"
+	testImplementation "org.codehaus.groovy:groovy-all:${groovy_version}"
+	testImplementation "org.spockframework:spock-core:${spockframework_version}"
+	testImplementation "org.spockframework:spock-spring:${spockframework_version}"
+	testImplementation "org.springframework.boot:spring-boot-starter-test:${springboot_version}"
+
+	testImplementation "org.apache.curator:curator-test:4.0.1"
+
+}
+
+bootRun {
+	jvmArgs = [
+			'-Xdebug'
+	]
+	args = [
+			'--spring.profiles.active=local'
+	]
+}
+
+idea{
+	module{
+		inheritOutputDirs = false
+		outputDir = compileJava.destinationDir
+		testOutputDir = compileTestJava.destinationDir
+	}
+}
+
+
+task buildDockerImage(type: Exec) {
+	inputs.files 'Dockerfile'
+	commandLine 'docker', 'build', '-t', 'nbuesing/quiz-builder:2.0.0', '.'
+}
+
+build.dependsOn buildDockerImage

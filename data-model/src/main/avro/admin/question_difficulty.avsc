@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "QuestionDifficulty",
+  "namespace": "com.github.nbuesing.quiz.model",
+  "fields": [
+    {
+      "name": "question_id",
+      "type": "string"
+    },
+    {
+      "name": "difficulty",
+      "type": "int"
+    },
+    {
+      "name": "action",
+      "type": {
+        "type": "enum",
+        "name": "Action",
+        "symbols": [
+          "ADD",
+          "REMOVE"
+        ]
+      }
+    }
+  ]
+}

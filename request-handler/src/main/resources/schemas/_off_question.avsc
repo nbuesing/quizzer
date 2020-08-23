@@ -1,0 +1,67 @@
+{
+  "type": "record",
+  "name": "Question",
+  "namespace": "com.github.nbuesing.quiz",
+  "fields": [
+    {
+      "name": "QUESTION_ID",
+      "type": "int"
+    },
+    {
+      "name": "STATEMENT",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "A",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "B",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "C",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "D",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "CORRECT_ANSWER",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        }
+      ],
+      "default": null,
+      "doc": "null so data structure can be reused by next question"
+    },
+    {
+      "name": "DIFFICULTY",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null,
+      "doc": "null so data structure can be reused by next question"
+    }
+  ]
+}

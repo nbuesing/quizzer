@@ -1,0 +1,59 @@
+{
+  "type": "record",
+  "name": "Quiz",
+  "namespace": "com.github.nbuesing.quiz.model",
+  "fields": [
+    {
+      "name": "quiz_id",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "max",
+      "type": "int"
+    },
+    {
+      "name": "answered",
+      "type": {
+        "type": "map",
+        "values": {
+          "type": "record",
+          "name": "QuizAnswer",
+          "fields": [
+            {
+              "name": "submitted",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            {
+              "name": "correct",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "default": {}
+    },
+    {
+      "name": "next_question_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "next_difficulty",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "QuizStart",
+  "namespace": "com.github.nbuesing.quiz",
+  "fields": [
+    {
+      "name": "quiz_id",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "name": "count",
+      "type": "int"
+    },
+    {
+      "name": "request_id",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    }
+  ]
+}

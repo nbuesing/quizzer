@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2019.
+  ~
+  ~ This code is created to showcase the ability and practices of the
+  ~ employees of Object Partners, Inc.
+  ~
+  ~ It can be viewed by Compsource employees purely to review the coding
+  ~ design and implementation by Object Partners, Inc. employees.
+  ~
+  ~
+  -->
+
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="com.github.nbuesing.quiz" level="DEBUG"/>
+    <root level="INFO" />
+</configuration>

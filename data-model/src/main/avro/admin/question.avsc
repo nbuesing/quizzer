@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "Question",
+  "namespace": "com.github.nbuesing.quiz.model",
+  "fields": [
+    {
+      "name": "question_id",
+      "type": "string"
+    },
+    {
+      "name": "statement",
+      "type": "string"
+    },
+    {
+      "name": "a",
+      "type": "string"
+    },
+    {
+      "name": "b",
+      "type": "string"
+    },
+    {
+      "name": "c",
+      "type": "string"
+    },
+    {
+      "name": "d",
+      "type": "string"
+    },
+    {
+      "name": "correct_answer",
+      "type": "string"
+    },
+    {
+      "name": "difficulty",
+      "type": "int",
+      "default": -1
+    },
+    {
+      "name": "previous_difficulty",
+      "type": [
+        "null",
+        "int"
+      ],
+      "default": null,
+      "doc": "used internally by quiz builder application; avoids need of another data structure"
+    }
+  ]
+}

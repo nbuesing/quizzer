@@ -1,0 +1,13 @@
+kafka:
+  security-protocol: PLAINTEXT
+  bootstrap-servers:
+    - localhost:19092
+    - localhost:29092
+    - localhost:39092
+    - localhost:49092
+  schema-registry: http://localhost:8081
+
+server:
+  servlet:
+    context-path: /
+  port: 9079

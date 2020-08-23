@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "QuizStart",
+  "namespace": "com.github.nbuesing.quiz",
+  "fields": [
+    {
+      "name": "QUIZ_ID",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "USER_ID",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "COUNT",
+      "type": "int"
+    }
+  ]
+}
